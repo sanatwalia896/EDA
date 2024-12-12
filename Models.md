@@ -54,7 +54,7 @@ graph TD
 - **Computer Memory Usage Before**: 62.66 MB
 - **Computer Memory Usage After**: 62.73 MB
 - **Memory Usage by Model during Inference**: 0.07 MB
-- **Model Output Shapes**: [(1, 2)]
+
 
 
 ### antispoofing_bin_1.5_128.onnx
@@ -91,6 +91,17 @@ For more details, visit the [Silent-Face-Anti-Spoofing GitHub Repository](#) , [
 ### Advantages:
 - **Real-Time Detection**: Capable of processing images swiftly, making it suitable for applications like surveillance, face recognition systems, and user interaction systems.
 - **Resource Efficiency**: Small in size and computationally efficient, YOLOv7 Lite is an excellent choice for face detection on mobile and embedded platforms.
+
+## Model Benchmarks
+### YOLO-7lite.onnx
+- Execution Provider: **CPExecutionProvider**
+- **Average Inference Time**: 0.036573 seconds
+- **FPS (Frames Per Second)**: 27.34
+- **Total Inference Time for 100 runs**: 3.66 seconds
+- **Computer Memory Usage Before**: 129.72 MBMemory
+- **Computer Memory Usage After**: 129.92 MB
+- **Memory Usage by Model during Inference**: 0.02 MB
+
 
 For further details, visit the [YOLOv7 Lite Face Detection GitHub Repository](#).
 
