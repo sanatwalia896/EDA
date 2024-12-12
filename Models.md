@@ -25,7 +25,8 @@ The **Anti-Spoofing** model is a lightweight, real-time solution for detecting s
 
 # Face Antispoofing Model Architecture
 
-```mermaid
+```
+mermaid
 graph TD
     A[Input Image (1x3x80x80)] --> B[Fourier Transform]
     B --> C[Normalization]
@@ -42,7 +43,7 @@ graph TD
         K --> L[Conv3x3 (32)]
         L --> G
     end
-
+```
 
 ## Model Benchmarks
 ### antispoofing_bin_1.5_128.onnx
