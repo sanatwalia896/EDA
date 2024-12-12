@@ -27,18 +27,21 @@ The **Anti-Spoofing** model is a lightweight, real-time solution for detecting s
 
 ``` mermaid
 flowchart LR;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-    D-->E;
-    E-->A;
-    D-->C;
-    D-->B;
-    E-->B;
-    A-->E;
-    B-->A;
-    B-->E;
+    A[Input Image (1x3x80x80)] --> B[Fourier Transform]
+    B --> C[Normalization]
+    C --> D[Resize (1x1x10x10)]
+    D --> E[FT Loss]
+    D --> F[FT Generator]
+    F --> G[Feature Map (1x128x10x10)]
+    G --> H[Flatten (1x512)]
+    H --> I[Softmax Loss]
+
+    subgraph MiniFASNet
+        F --> J[Conv 3x3 (128)]
+        J --> K[Conv 3x3 (64)]
+        K --> L[Conv 3x3 (32)]
+        L --> G
+    end
 ```
 
 
